@@ -1,10 +1,22 @@
 # mc.yohane.su
+
+![](https://github.com/sk2sat/mc.yohane.su/actions/workflows/build-image.yml/badge.svg?branch=main)
+![](https://img.shields.io/docker/image-size/sksat/mc.yohane.su)
+
 my minecraft server
 
-## setup
+## setup & start
 
+Deploy Machine
 ```sh
 $ ./setup.sh
+$ docker-compose up -d
+```
+
+Server Machine(mc.yohane.su)
+```sh
+$ cp minecraft-expose.service ~/.config/systemd/user
+$ systemctl enable --user --now minecraft-expose.service
 ```
 
 ## maintenance
