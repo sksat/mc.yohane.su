@@ -23,6 +23,13 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v1
+        with:
+          username: sksat
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Build and Push
         uses: docker/build-push-action@v2
         with:
