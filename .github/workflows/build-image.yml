@@ -1,6 +1,10 @@
 name: Build Container Image
 
-on: push
+on:
+  push:
+    paths:
+      - 'Dockerfile'
+      - '.github/workflows/**'
 
 jobs:
   build:
