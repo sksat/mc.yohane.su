@@ -3,11 +3,13 @@ version: "3.7"
 services:
   paper:
     build: .
+    restart: always
 
+    stdin_open: true
     ports:
       - 25565:25565
+      - 25575:25575
     environment:
       JAVA_TOOL_OPTIONS: "-Xms1G -Xmx1G"
     volumes:
-      - ./config/eula.txt:/app/eula.txt
-      - ./data/world:/app/world
+      - ./data:/app
