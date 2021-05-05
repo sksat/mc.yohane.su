@@ -3,7 +3,7 @@ version: "3.7"
 services:
   paper:
     #build: .
-    image: ghcr.io/sk2sat/mc.yohane.su:main
+    image: ghcr.io/sksat/mc.yohane.su:main
     #image: sksat/mc.yohane.su:github-actions
     restart: always
 
