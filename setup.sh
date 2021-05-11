@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ ! -d data ];then
-	echo "Creating data dir"
-	mkdir data
-fi
 if [ ! -e data/eula.txt ];then
 	AGREE=`read -p "Agree to EULA? (y/N): " yn; case "$yn" in [yY]*) echo "true";; *) echo "false";; esac`
 	echo "eula=${AGREE}" > data/eula.txt
