@@ -26,3 +26,7 @@ $ ./cmd.sh say hello
 ```
 
 or use [mcrcon](https://github.com/Tiiffi/mcrcon)
+
+## how to join
+
+Edit [whitelist.json](https://github.com/sksat/mc.yohane.su/blob/main/data/whitelist.json) and send a pull request
