@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 TimeoutStartSec=0
-Type=notify
-ExecStart=/usr/bin/cloudflared access tcp --hostname mc-tunnel.sksat.net --url mc.yohane.su:25565
-Restart=on-failure
+Type=simple
+ExecStart=/usr/local/bin/cloudflared access tcp --hostname mc-tunnel.sksat.net --url mc.yohane.su:25565
+Restart=always
 RestartSec=5s
 
 [Install]

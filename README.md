@@ -5,6 +5,8 @@
 
 my minecraft server
 
+- [Status Page](https://stats.uptimerobot.com/QLk7XC6Kxv)(expose server port only)
+
 ## setup & start
 
 Deploy Machine
