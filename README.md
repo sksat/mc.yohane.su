@@ -7,7 +7,7 @@
 
 my minecraft server
 
-- [Status Page](https://stats.uptimerobot.com/QLk7XC6Kxv)(expose server port only)
+- [Status Page](https://stats.uptimerobot.com/QLk7XC6Kxv/787979705)(expose server port only)
 
 ## setup & start
 
@@ -21,6 +21,7 @@ Server Machine(mc.yohane.su)
 ```sh
 $ cp minecraft-expose.service ~/.config/systemd/user
 $ systemctl enable --user --now minecraft-expose.service
+$ loginctl enable-linger sksat  #11
 ```
 
 ## maintenance

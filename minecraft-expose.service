@@ -5,9 +5,10 @@ After=network.target
 [Service]
 TimeoutStartSec=0
 Type=simple
-ExecStart=/usr/local/bin/cloudflared access tcp --hostname mc-tunnel.sksat.net --url mc.yohane.su:25565
+ExecStart=/usr/local/bin/cloudflared access tcp --hostname mc-tunnel.sksat.net --url mc.yohane.su:25565 --loglevel info
 Restart=always
-RestartSec=5s
+StartLimitInterval=60s
+StartLimitBurst=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
