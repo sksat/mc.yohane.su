@@ -1,0 +1,4 @@
+REPO="https://github.com/sksat/mc.yohane.su"
+REGISTRY="ghcr.io"
+IMAGE="sksat/mc.yohane.su"
+VERSION=main
