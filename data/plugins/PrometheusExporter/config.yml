@@ -1,0 +1,19 @@
+host: 0.0.0.0
+port: 9225
+enable_metrics:
+  villagers_total: true
+  jvm_threads: true
+  jvm_gc: true
+  players_total: true
+  entities_total: true
+  living_entities_total: true
+  loaded_chunks_total: true
+  jvm_memory: true
+  players_online_total: true
+  tps: true
+  tick_duration_average: true
+  tick_duration_median: true
+  tick_duration_min: false
+  tick_duration_max: true
+  player_online: false
+  player_statistic: false
