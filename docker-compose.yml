@@ -9,6 +9,7 @@ services:
 
     stdin_open: true
     ports:
+      - 9225:9225
       - 25565:25565
       - 25575:25575
     environment:

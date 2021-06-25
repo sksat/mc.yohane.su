@@ -7,7 +7,18 @@
 
 my minecraft server
 
-- [Status Page](https://stats.uptimerobot.com/QLk7XC6Kxv/787979705)(expose server port only)
+## status
+
+- [Uptime Robot](https://stats.uptimerobot.com/QLk7XC6Kxv/787979705)
+- [Grafana Dashboard](https://grafana.sksat.net/goto/aq1Idnknk?orgId=1)
+
+![JVM memory](https://grafana.sksat.net/render/d-solo/BIXBinz7z/minecraft?orgId=1&refresh=30s&from=1624651161148&to=1624652961148&panelId=5&width=400&height=200&tz=Asia%2FTokyo)
+![Players](https://grafana.sksat.net/render/d-solo/BIXBinz7z/minecraft?orgId=1&refresh=30s&from=1624651161148&to=1624652961148&panelId=1&width=400&height=200&tz=Asia%2FTokyo)
+
+![Loaded Chunks](https://grafana.sksat.net/render/d-solo/BIXBinz7z/minecraft?orgId=1&refresh=30s&from=1624651161148&to=1624652961148&panelId=3&width=260&height=300&tz=Asia%2FTokyo)
+![Entities](https://grafana.sksat.net/render/d-solo/BIXBinz7z/minecraft?orgId=1&refresh=30s&from=1624651161148&to=1624652961148&panelId=4&width=260&height=300&tz=Asia%2FTokyo)
+![Villagers](https://grafana.sksat.net/render/d-solo/BIXBinz7z/minecraft?orgId=1&refresh=30s&from=1624651161148&to=1624652961148&panelId=11&width=260&height=300&tz=Asia%2FTokyo)
+
 
 ## setup & start
 
