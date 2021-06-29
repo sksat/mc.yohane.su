@@ -15,12 +15,11 @@ RUN ls Paper/build/libs -lh
 RUN cp Paper/build/libs/Paper-1.17-R0.1-SNAPSHOT.jar Paper/paperclip.jar
 
 # Run
-FROM gcr.io/distroless/java:11
+FROM adoptopenjdk/openjdk16:alpine-jre
 WORKDIR /app
 COPY --from=builder /build/Paper/paperclip.jar /bin/
 COPY --from=builder /build/Paper/LICENSE.md /licenses/Paper/
 COPY --from=builder /build/Paper/licenses /licenses/Paper/licenses
-#SHELL ["/busybox/sh", "-c"]
 #RUN ls /licenses/Paper/licenses
 
-CMD ["/bin/paperclip.jar"]
+CMD ["java", "-jar", "/bin/paperclip.jar"]
