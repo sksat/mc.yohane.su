@@ -30,8 +30,9 @@ $ docker-compose up -d
 
 Server Machine(mc.yohane.su)
 ```sh
-$ cp minecraft-expose.service ~/.config/systemd/user
+$ cp minecraft-* ~/.config/systemd/user
 $ systemctl enable --user --now minecraft-expose.service
+$ systemctl enable --user --now minecraft-backup.timer
 $ loginctl enable-linger sksat  #11
 ```
 
