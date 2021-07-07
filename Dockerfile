@@ -6,7 +6,7 @@ WORKDIR /build
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y  git patch time
 RUN git config --global user.name sksat && git config --global user.email sksat@sksat
 RUN git clone https://github.com/PaperMC/Paper
-RUN cd Paper && git checkout 1d194e56053e0ed4867661cadebc223ea2b690f9
+RUN cd Paper && git checkout 4aef0354dda7d89c7d7e7632564d1a5bf75d3f1f
 
 RUN cd Paper && ./gradlew tasks
 RUN cd Paper && time ./gradlew applyPatches && time ./gradlew paperclipJar
