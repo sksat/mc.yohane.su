@@ -13,7 +13,7 @@ RUN cd Paper && time ./gradlew applyPatches && time ./gradlew paperclipJar
 
 RUN find Paper | grep jar
 RUN ls Paper/build/libs -lh
-RUN cp Paper/build/libs/Paper-1.17-R0.1-SNAPSHOT.jar Paper/paperclip.jar
+RUN cp Paper/build/libs/Paper-1.17.1-R0.1-SNAPSHOT.jar Paper/paperclip.jar
 
 # Run
 FROM adoptopenjdk/openjdk16:alpine-jre
