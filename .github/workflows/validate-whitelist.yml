@@ -1,0 +1,16 @@
+name: Validate whitelist.json
+
+on:
+  push:
+    paths:
+      - 'data/whitelist.json'
+      - '.github/workflows/validate-whitelist.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: sksat/minecraft-whitelist-validator@v0.2.0
+        with:
+          json: 'data/whitelist.json'
