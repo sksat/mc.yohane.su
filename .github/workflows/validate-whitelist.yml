@@ -1,3 +1,5 @@
+name: Validate whitelist.json
+
 on:
   push:
     paths:
@@ -10,3 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: sksat/minecraft-whitelist-validator@v0.2.0
+        with:
+          json: 'data/whitelist.json'
