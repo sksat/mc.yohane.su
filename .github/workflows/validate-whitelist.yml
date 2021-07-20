@@ -2,6 +2,7 @@ on:
   push:
     paths:
       - 'data/whitelist.json'
+      - '.github/workflows/validate-whitelist.yml'
 
 jobs:
   validate:
