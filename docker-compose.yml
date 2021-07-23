@@ -2,9 +2,7 @@ version: "3.7"
 
 services:
   paper:
-    #build: .
-    image: ghcr.io/sksat/mc.yohane.su:main
-    #image: sksat/mc.yohane.su:github-actions
+    image: ghcr.io/sksat/papermc-docker:1.17.1@sha256:b26d57b32d230fdfbfa6007a2425b52e88ff22981aabe2ce282e31cc3346267c
     restart: always
 
     stdin_open: true
