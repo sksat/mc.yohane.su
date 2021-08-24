@@ -1,6 +1,10 @@
 name: Validate whitelist.json
 
 on:
+  pull_request:
+    paths:
+      - 'data/whitelist.json'
+      - '.github/workflows/validate-whitelist.yml'
   push:
     paths:
       - 'data/whitelist.json'
