@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   paper:
-    image: ghcr.io/sksat/papermc-docker:1.17.1@sha256:3dd3ffac4ba2f9833e231759ab7736e8cff4f61a4364dc42e96ec01014965a24
+    image: ghcr.io/sksat/papermc-docker:1.17.1@sha256:40cbdc084272d3c62da98b5ce252f335bd1025038e7ea74c46546123a8635066
     restart: always
 
     stdin_open: true
