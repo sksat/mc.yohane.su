@@ -2,14 +2,14 @@
 
 # PLUGIN=(repo, version, file-prefix)
 
-# datasource=github-releases
-PLUGIN_COREPROTECT=("PlayPro/CoreProtect" "v20.0" "CoreProtect")
-
-# datasource=github-releases
-PLUGIN_DISCORDSRV=("DiscordSRV/DiscordSRV" "v1.23.0" "DiscordSRV-Build")
-
-# datasource=github-releases
-PLUGIN_PROMETHEUS_EXPORTER=("sladkoff/minecraft-prometheus-exporter" "v2.4.2" "minecraft-prometheus-exporter")
+PLUGINS=(
+  # datasource=github-releases
+  "PlayPro/CoreProtect v20.0 CoreProtect"
+  # datasource=github-releases
+  "DiscordSRV/DiscordSRV v1.23.0 DiscordSRV-Build"
+  # datasource=github-releases
+  "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter"
+)
 
 function download_github(){
 	echo $1
@@ -32,6 +32,11 @@ function download_github(){
 	echo "[${REPO}] done"
 }
 
-download_github ${PLUGIN_COREPROTECT[0]} ${PLUGIN_COREPROTECT[1]} "${PLUGIN_COREPROTECT[2]}"
-download_github ${PLUGIN_DISCORDSRV[0]} ${PLUGIN_DISCORDSRV[1]} ${PLUGIN_DISCORDSRV[2]}
-download_github ${PLUGIN_PROMETHEUS_EXPORTER[0]} ${PLUGIN_PROMETHEUS_EXPORTER[1]} ${PLUGIN_PROMETHEUS_EXPORTER[2]}
+for plugin in "${PLUGINS[@]}"; do
+	p=(${plugin[@]})
+	repo="${p[0]}"
+	version="${p[1]}"
+	fprefix="${p[2]}"
+	echo "repo: $repo, version=$version, fprefix=$fprefix"
+	download_github "$repo" "$version" "$fprefix"
+done
