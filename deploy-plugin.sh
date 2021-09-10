@@ -1,31 +1,42 @@
 #!/bin/bash
 
-COREPROTECT_REPO="PlayPro/CoreProtect"
-DISCORDSRV_REPO="DiscordSRV/DiscordSRV"
-PROMETHEUS_EXPORTER_REPO="sladkoff/minecraft-prometheus-exporter"
+# PLUGIN=(repo, version, file-prefix)
 
-COREPROTECT_VERSION="20.0"
-DISCORDSRV_VERSION="1.23.0"
-PROMETHEUS_EXPORTER_VERSION="2.4.2"
-
-COREPROTECT_FPREFIX="CoreProtect"
-DISCORDSRV_FPREFIX="DiscordSRV-Build"
-PROMETHEUS_EXPORTER_FPREFIX="minecraft-prometheus-exporter"
+PLUGINS=(
+  # datasource=github-releases
+  "PlayPro/CoreProtect v20.0 CoreProtect"
+  # datasource=github-releases
+  "DiscordSRV/DiscordSRV v1.23.0 DiscordSRV-Build"
+  # datasource=github-releases
+  "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter"
+)
 
 function download_github(){
+	echo $1
+	echo $2
+	echo $3
 	REPO="$1"
 	VERSION="$2"
 	FNAME_PREFIX="$3"
 
 	cd data/plugins
 	echo "[${REPO}] remove old version"
-	rm "${FNAME_PREFIX}"*.jar
+	rm -f "${FNAME_PREFIX}"*.jar
 	echo "[${REPO}] download new version(${VERSION})"
-	wget -q "https://github.com/${REPO}/releases/download/v${VERSION}/${FNAME_PREFIX}-${VERSION}.jar"
+	VTMP="${VERSION#v}"
+	FNAME="${FNAME_PREFIX}-${VTMP}.jar"
+	URL="https://github.com/${REPO}/releases/download/${VERSION}/${FNAME}"
+	echo "[$REPO] URL: $URL"
+	wget -q "$URL"
 	cd ../..
 	echo "[${REPO}] done"
 }
 
-download_github "${COREPROTECT_REPO}" "${COREPROTECT_VERSION}" "${COREPROTECT_FPREFIX}"
-download_github "${DISCORDSRV_REPO}" "${DISCORDSRV_VERSION}" "${DISCORDSRV_FPREFIX}"
-download_github "${PROMETHEUS_EXPORTER_REPO}" "${PROMETHEUS_EXPORTER_VERSION}" "${PROMETHEUS_EXPORTER_FPREFIX}"
+for plugin in "${PLUGINS[@]}"; do
+	p=(${plugin[@]})
+	repo="${p[0]}"
+	version="${p[1]}"
+	fprefix="${p[2]}"
+	echo "repo: $repo, version=$version, fprefix=$fprefix"
+	download_github "$repo" "$version" "$fprefix"
+done

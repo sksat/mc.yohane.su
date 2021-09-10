@@ -1,5 +1,14 @@
 {
   "extends": [
     "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["deploy-plugin.sh"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?)?\n  \"(?<depName>.*?) (?<currentValue>.*)?\"\n"
+      ],
+      "versioningTemplate": "semver"
+    }
   ]
 }
