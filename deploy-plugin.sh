@@ -19,7 +19,7 @@ function download_github(){
 
 	cd data/plugins
 	echo "[${REPO}] remove old version"
-	rm "${FNAME_PREFIX}"*
+	rm "${FNAME_PREFIX}"*.jar
 	echo "[${REPO}] download new version(${VERSION})"
 	wget -q "https://github.com/${REPO}/releases/download/v${VERSION}/${FNAME_PREFIX}-${VERSION}.jar"
 	cd ../..
