@@ -18,11 +18,12 @@ function download_github(){
 	FNAME_PREFIX="$3"
 
 	cd data/plugins
-	echo "remove old version"
+	echo "[${REPO}] remove old version"
 	rm "${FNAME_PREFIX}"*
-	echo "download new version"
+	echo "[${REPO}] download new version(${VERSION})"
 	wget -q "https://github.com/${REPO}/releases/download/v${VERSION}/${FNAME_PREFIX}-${VERSION}.jar"
 	cd ../..
+	echo "[${REPO}] done"
 }
 
 download_github "${COREPROTECT_REPO}" "${COREPROTECT_VERSION}" "${COREPROTECT_FPREFIX}"
