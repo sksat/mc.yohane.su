@@ -1,4 +1,4 @@
 REPO="https://github.com/sksat/mc.yohane.su"
 UPDATE_REPO_ONLY=true
 UPDATE_IMAGE_BY_REPO=true
-BEFORE_SCRIPT="./deploy-plugin.sh"
+BEFORE_RESTART="./deploy-plugin.sh"
