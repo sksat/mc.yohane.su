@@ -21,7 +21,7 @@ function download_github(){
 	echo "remove old version"
 	rm "${FNAME_PREFIX}"*
 	echo "download new version"
-	wget "https://github.com/${REPO}/releases/download/v${VERSION}/${FNAME_PREFIX}-${VERSION}.jar"
+	wget -q "https://github.com/${REPO}/releases/download/v${VERSION}/${FNAME_PREFIX}-${VERSION}.jar"
 	cd ../..
 }
 
