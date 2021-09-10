@@ -6,9 +6,9 @@
     {
       "fileMatch": ["deploy-plugin.sh"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?_VERSION=\"(?<currentValue>.*)\"\n"
+        "datasource=(?<datasource>.*?)?\nPLUGIN_.*?=\(\"?<depName>.*?\" \"?<versioning>.*?\"?\)\n"
       ],
-      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+      "versioningTemplate": "semver"
     }
   ]
 }
