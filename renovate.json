@@ -6,7 +6,7 @@
     {
       "fileMatch": ["deploy-plugin.sh"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?)?\n  \"(?<depName>.*?) (?<currentValue>.*)?\"\n"
+        "datasource=(?<datasource>.*?)?\n  \"(?<depName>.*?) (?<currentValue>.*) .*?\"\n"
       ],
       "versioningTemplate": "semver"
     }
