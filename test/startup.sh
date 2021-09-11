@@ -13,7 +13,8 @@ echo "setup"
 
 echo "deploy plugin"
 ./deploy-plugin.sh
-ls data/plugins
+echo "plugin list:"
+ls data/plugins/*.jar
 
 echo "start server"
 docker-compose up -d
