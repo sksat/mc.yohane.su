@@ -8,7 +8,7 @@
       "matchStrings": [
         "datasource=(?<datasource>.*?)( versioning=(?<versioning>.*?))?\n  \"(?<depName>.*?) (?<currentValue>.*) .*?\"\n"
       ],
-      "versioningTemplate": "semver"
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]
 }
