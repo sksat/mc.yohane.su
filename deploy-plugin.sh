@@ -3,11 +3,11 @@
 # PLUGIN=(repo, version, file-prefix)
 
 PLUGINS=(
-  # datasource=github-releases
+  # datasource=github-releases versioning=regex:^(?<major>\\d+)\\.(?<minor>\\d+)$
   "PlayPro/CoreProtect v20.0 CoreProtect"
   # datasource=github-releases
   "DiscordSRV/DiscordSRV v1.24.0 DiscordSRV-Build"
-  # datasource=github-releases versioning=regex:^(?<major>\\d+)\\.(?<minor>\\d+)$
+  # datasource=github-releases
   "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter"
 )
 
