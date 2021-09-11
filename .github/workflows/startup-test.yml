@@ -1,0 +1,25 @@
+name: Startup Test
+
+on:
+  push:
+    paths:
+      - 'deploy-plugin.sh'
+      - 'server.properties'
+      - 'setup.sh'
+      - 'docker-compose.yml'
+      - 'test/startup.sh'
+      - '.github/workflows/startup-test.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          python --version
+          python3 -m pip install mcstatus
+      - name: startup test
+        run: ./test/startup.sh
