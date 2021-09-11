@@ -1,7 +1,7 @@
 #!/bin/bash
 pwd
 
-MINECRAFT_VERSION="Paper 1.17.1"
+MINECRAFT_VERSION="1.17.1"
 
 mkdir -p data
 
@@ -13,6 +13,7 @@ echo "setup"
 
 echo "deploy plugin"
 ./deploy-plugin.sh
+ls data/plugins
 
 echo "start server"
 docker-compose up -d
