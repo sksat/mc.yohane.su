@@ -1,6 +1,8 @@
 #!/bin/bash
 pwd
 
+MINECRAFT_VERSION="Paper 1.17.1"
+
 mkdir -p data
 
 echo "EULA"
