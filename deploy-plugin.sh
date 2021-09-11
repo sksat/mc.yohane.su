@@ -4,7 +4,7 @@
 
 PLUGINS=(
   # datasource=github-releases versioning=docker
-  "PlayPro/CoreProtect v20.0 CoreProtect"
+  "PlayPro/CoreProtect v20.1 CoreProtect"
   # datasource=github-releases
   "DiscordSRV/DiscordSRV v1.24.0 DiscordSRV-Build"
   # datasource=github-releases
