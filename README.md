@@ -45,3 +45,10 @@ or use [mcrcon](https://github.com/Tiiffi/mcrcon)
 ## how to join
 
 Edit [whitelist.json](https://github.com/sksat/mc.yohane.su/blob/main/data/whitelist.json) and send a pull request
+
+## links
+
+- container image: [papermc-docker](https://github.com/sksat/papermc-docker)
+- deploy automation script: [compose-cd](https://github.com/sksat/compose-cd)
+- whitelist.json check Action: [minecraft-whitelist-validator](https://github.com/sksat/minecraft-whitelist-validator)
+- blog: [マイクラサーバをGitHubで運用する](https://sksat.hatenablog.com/entry/2021/08/26/015620)
