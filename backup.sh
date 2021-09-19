@@ -18,7 +18,7 @@ cp -r data/world_the_end tmp/data/
 ./cmd.sh say 'copy data to temporary is complete'
 
 cd tmp
-tar -I 'zstd --ultra -22 -T0' -cvpf ${DATE}.tar.zst data
+tar -I 'zstd -T0' -cvpf ${DATE}.tar.zst data
 ls -lh ${DATE}.tar.zst
 
 # upload

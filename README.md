@@ -26,13 +26,7 @@ $ ./setup.sh
 $ docker-compose up -d
 ```
 
-Server Machine(mc.yohane.su)
-```sh
-$ cp minecraft-* ~/.config/systemd/user
-$ systemctl enable --user --now minecraft-expose.service
-$ systemctl enable --user --now minecraft-backup.timer
-$ loginctl enable-linger sksat  #11
-```
+memo: This server does not use own expose service. It use [sksat/infra](https://github.com/sksat/infra)'s tunnel service now.
 
 ## maintenance
 
