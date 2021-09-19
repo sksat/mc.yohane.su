@@ -11,6 +11,6 @@ services:
       - 25565:25565
       - 25575:25575
     environment:
-      JAVA_TOOL_OPTIONS: "-Xms1G -Xmx1G"
+      JAVA_TOOL_OPTIONS: "-Xms2G -Xmx2G"
     volumes:
       - ./data:/app
