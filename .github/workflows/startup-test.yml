@@ -1,7 +1,7 @@
 name: Startup Test
 
 on:
-  push:
+  pull_request:
     paths:
       - 'deploy-plugin.sh'
       - 'server.properties'
