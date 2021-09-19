@@ -19,5 +19,5 @@ ln -s `pwd`/minecraft-backup.service "${HOME}/.config/systemd/user/"
 ln -s `pwd`/minecraft-expose.service "${HOME}/.config/systemd/user"
 systemctl --user daemon-reload
 loginctl enable-linger sksat  #11
-systemctl enable --user --now minecraft-expose.service
+#systemctl enable --user --now minecraft-expose.service
 systemctl enable --user --now minecraft-backup.timer
