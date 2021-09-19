@@ -26,6 +26,8 @@ $ ./setup.sh
 $ docker-compose up -d
 ```
 
+memo: This server does not use own expose service. It use [sksat/infra](https://github.com/sksat/infra)'s tunnel service now.
+
 ## maintenance
 
 ```sh
