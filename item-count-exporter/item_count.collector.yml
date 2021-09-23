@@ -1,0 +1,15 @@
+collector_name: item_counts
+
+metrics:
+  - metric_name: get_item_counts
+    type: gauge
+    help: 'Counts of itemstacks in worlds'
+    key_labels:
+      - world_name
+      - item_stack_type
+    values: [world_wide_count]
+    query: |
+      select world_name, item_stack_type, sum(item_count) as world_wide_count
+      from item_stacks
+      where world_name in ("world", "world_nether", "world_the_end")
+      group by world_name, item_stack_type
