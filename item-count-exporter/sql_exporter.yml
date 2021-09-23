@@ -1,0 +1,15 @@
+# See https://github.com/free/sql_exporter/blob/6f96b0d6b40340929e4d84c902378e7ead113ff1/examples/sql_exporter.yml
+# for field descriptions.
+
+global:
+  scrape_timeout_offset: 500ms
+  min_interval: 2s
+  max_connections: 3
+  max_idle_connections: 3
+
+target:
+  data_source_name: 'mysql://root:mysql-root-password@tcp(db:3306)/itemcount'
+  collectors: [item_counts]
+
+collector_files: 
+  - "*.collector.yml"

@@ -17,6 +17,7 @@ services:
 
   db:
     image: mysql:8.0.26
+    command: --default-authentication-plugin=mysql_native_password
     ports:
       - 3306:3306
     environment:
@@ -24,3 +25,11 @@ services:
       MYSQL_DATABASE: "itemcount"
     volumes:
       - ./iscount_data:/var/lib/mysql
+
+  item-count-exporter:
+    image: githubfree/sql_exporter:0.5
+    ports:
+      - "9226:9399"
+    volumes:
+      - ./item-count-exporter/sql_exporter.yml:/sql_exporter.yml
+      - ./item-count-exporter/item_count.collector.yml:/item_count.collector.yml
