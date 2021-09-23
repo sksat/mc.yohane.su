@@ -15,7 +15,7 @@ services:
     volumes:
       - ./data:/app
 
-  icount-db:
+  db:
     image: mysql:8.0.26
     environment:
       MYSQL_ROOT_PASSWORD: "mysql-root-password"
