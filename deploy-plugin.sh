@@ -47,4 +47,7 @@ for plugin in "${PLUGINS[@]}"; do
 	fprefix="${p[2]}"
 	echo "repo: $repo, version=$version, fprefix=$fprefix"
 	download_github "$repo" "$version" "$fprefix"
+	if [ $? -gt 0 ]; then
+		exit 1
+	fi
 done
