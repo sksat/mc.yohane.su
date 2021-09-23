@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu
-cd `dirname $0/data`
+cd `dirname $0`
+cd data
 
 pwd
 
