@@ -31,6 +31,10 @@ function download_github(){
 	URL="https://github.com/${REPO}/releases/download/${VERSION}/${FNAME}"
 	echo "[$REPO] URL: $URL"
 	wget -q "$URL"
+	if [ $? -gt 0 ]; then
+		echo "[$REPO] download failed!"
+		exit 1
+	fi
 	cd ../..
 	echo "[${REPO}] done"
 }
