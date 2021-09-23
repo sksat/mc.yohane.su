@@ -63,6 +63,6 @@ if [ "${MCSTATUS_VERSION}" != "\"Paper ${MINECRAFT_VERSION}\"" ]; then
 	exit 1
 fi
 
-env IMG_TAG="${IMG_TAG}" docker-compose down
+docker-compose down
 sudo rm -rf data
 exit 0
