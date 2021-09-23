@@ -5,6 +5,7 @@ on:
     paths:
       - 'deploy-plugin.sh'
       - 'server.properties'
+      - 'data/ops.json'
       - 'setup.sh'
       - 'docker-compose.yml'
       - 'test/startup.sh'
