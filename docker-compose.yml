@@ -14,3 +14,13 @@ services:
       JAVA_TOOL_OPTIONS: "-Xms2G -Xmx2G"
     volumes:
       - ./data:/app
+
+  db:
+    image: mysql:8.0.26
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "mysql-root-password"
+      MYSQL_DATABASE: "itemcount"
+    volumes:
+      - ./iscount_data:/var/lib/mysql
