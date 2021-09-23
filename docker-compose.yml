@@ -17,8 +17,10 @@ services:
 
   db:
     image: mysql:8.0.26
+    ports:
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: "mysql-root-password"
       MYSQL_DATABASE: "itemcount"
-    ports:
-      - 3306:3306
+    volumes:
+      - ./iscount_data:/var/lib/mysql
