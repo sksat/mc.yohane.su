@@ -1,4 +1,0 @@
-mysql:
-  url: "icount-db:3306/itemcount"
-  username: root
-  password: "mysql-root-password"
