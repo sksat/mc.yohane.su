@@ -9,6 +9,8 @@ PLUGINS=(
   "DiscordSRV/DiscordSRV v1.24.0 DiscordSRV-Build"
   # datasource=github-releases
   "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter"
+  # datasource=github-releases
+  "kory33/itemstack-count-infrastructure v0.1.3 itemstack-count"
 )
 
 function download_github(){
