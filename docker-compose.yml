@@ -4,6 +4,8 @@ services:
   paper:
     image: ghcr.io/sksat/papermc-docker:1.17.1@sha256:28775c18d0d944f1ef5e79728bd85ca8ef41784561fdbacf9582aed955860e59
     restart: always
+    depends_on:
+      - db
 
     stdin_open: true
     ports:
@@ -28,6 +30,9 @@ services:
 
   item-count-exporter:
     image: githubfree/sql_exporter:0.5
+    depends_on:
+      - db
+
     ports:
       - "9226:9399"
     volumes:
