@@ -27,6 +27,7 @@ function download_github(){
 	echo "[${REPO}] download new version(${VERSION})"
 	VTMP="${VERSION#v}"
 	FNAME="${FNAME_PREFIX}-${VTMP}.jar"
+	echo "[$REPO] fname: $FNAME"
 	URL="https://github.com/${REPO}/releases/download/${VERSION}/${FNAME}"
 	echo "[$REPO] URL: $URL"
 	wget -q "$URL"
