@@ -1,4 +1,7 @@
 #!/bin/bash
+set -eu
+cd `dirname $0`
+
 pwd
 
 MINECRAFT_VERSION="1.17.1"
