@@ -11,7 +11,7 @@ PLUGINS=(
   # datasource=github-releases
   "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter nov"
   # datasource=github-releases
-  "kory33/itemstack-count-infrastructure v0.1.8 itemstack-count none"
+  "kory33/itemstack-count-infrastructure v0.1.10 itemstack-count none"
 )
 
 function download_github(){
