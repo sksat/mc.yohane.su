@@ -17,6 +17,13 @@ services:
     volumes:
       - ./data:/app
 
+  paper-tunnel:
+    image: cloudflare/cloudflared:2021.11.0
+    restart: always
+    volumes:
+      - ./cloudflared:/etc/cloudflared
+    command: tunnel --hostname mc-tunnel.sksat.net --url tcp://paper:25565 --loglevel info
+
   db:
     image: mysql:8.0.27
     command: --default-authentication-plugin=mysql_native_password
