@@ -12,6 +12,8 @@ PLUGINS=(
   "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter nov"
   # datasource=github-releases
   "kory33/itemstack-count-infrastructure v0.1.10 itemstack-count none"
+  # datasource=github-releases
+  "jrbudda/Vivecraft_Spigot_Extensions 1.17.1 Vivecraft_Spigot_Extensions zip"
 )
 
 function download_github(){
@@ -32,6 +34,8 @@ function download_github(){
 	if [[ "$FNAME_VERSIONING" == 'nov' ]]; then
 		VTMP="${VERSION#v}"
 		FNAME="${FNAME_PREFIX}-${VTMP}.jar"
+	elif [[ "$FNAME_VERSIONING" == 'zip' ]]; then
+		FNAME="${FNAME_PREFIX}.${VERSION}b2.zip" # TODO for vivecraft only
 	fi
 	echo "[$REPO] fname: $FNAME"
 
@@ -41,6 +45,11 @@ function download_github(){
 	if [ $? -gt 0 ]; then
 		echo "[$REPO] download failed!"
 		exit 1
+	fi
+	
+	if [[ "$FNAME_VERSIONING" == 'zip' ]]; then
+		unzip "${FNAME}"
+		rm -f "${FNAME}"
 	fi
 	cd ../..
 	echo "[${REPO}] done"
