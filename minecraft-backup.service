@@ -3,7 +3,7 @@ Description=Minecraft Backup Service
 
 [Service]
 Type=oneshot
-ExecStart=/home/sksat/srv/mc.yohane.su/backup.sh
+ExecStart=sudo -u sksat /home/sksat/srv/mc.yohane.su/backup.sh
 
 [Install]
 WantedBy=default.target
