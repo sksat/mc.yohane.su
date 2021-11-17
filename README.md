@@ -22,11 +22,20 @@ my minecraft server
 
 Deploy Machine
 ```sh
+### deps: docker, docker-compose
+### deps(backup service): systemd, rclone
 $ ./setup.sh
 $ docker-compose up -d
 ```
 
-memo: This server does not use own expose service. It use [sksat/infra](https://github.com/sksat/infra)'s tunnel service now.
+:bulb: It is highly recommended to use [compose-cd](https://github.com/sksat/compose-cd) for continuous deployment.
+
+Expose Machine
+```sh
+### deps: systemd, cloudflared
+$ cp ./minecraft-expose.service ~/.config/systemd/user/
+$ systemctl --user enable --now minecraft-expose
+```
 
 ## maintenance
 
