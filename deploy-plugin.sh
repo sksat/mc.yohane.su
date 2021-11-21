@@ -14,6 +14,8 @@ PLUGINS=(
   "kory33/itemstack-count-infrastructure v0.1.10 itemstack-count none"
   # datasource=github-releases
   "jrbudda/Vivecraft_Spigot_Extensions 1.17.1 Vivecraft_Spigot_Extensions zip"
+  # datasource=github-releases
+  "Siro256/ConfineChickens v1.0.0 ConfineChickens nov"
 )
 
 function download_github(){
