@@ -42,6 +42,10 @@
   description: "bug in PaperMC"
   color: "e51b33"
 
+- name: "bug:plugin"
+  description: "bug in Plugin"
+  color: "e99695"
+
 - name: "In Game"
   description: ""
   color: "14d95d"
