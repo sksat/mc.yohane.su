@@ -143,7 +143,7 @@ world-settings:
     portal-create-radius: 16
     portal-search-vanilla-dimension-scaling: true
     disable-teleportation-suffocation-check: false
-    allow-non-player-entities-on-scoreboards: false
+    allow-non-player-entities-on-scoreboards: true
     non-player-arrow-despawn-rate: -1
     creative-arrow-despawn-rate: -1
     skeleton-horse-thunder-spawn-chance: 0.01
