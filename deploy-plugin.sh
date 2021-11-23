@@ -15,7 +15,7 @@ PLUGINS=(
   # datasource=github-releases
   "jrbudda/Vivecraft_Spigot_Extensions 1.17.1 Vivecraft_Spigot_Extensions zip"
   # datasource=github-releases
-  "Siro256/ConfineChickens v1.0.1 ConfineChickens nov"
+  "Siro256/ConfineChickens v1.0.2 ConfineChickens nov"
 )
 
 function download_github(){
