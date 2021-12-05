@@ -2,6 +2,13 @@
   "extends": [
     "config:base"
   ],
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "updateTypes": ["major"],
+      "enabled": true
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": ["deploy-plugin.sh"],
