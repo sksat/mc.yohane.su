@@ -4,7 +4,7 @@ cd `dirname $0`/..
 
 pwd
 
-MINECRAFT_VERSION="1.18"
+MINECRAFT_VERSION="1.18.1"
 
 mkdir -p data
 
