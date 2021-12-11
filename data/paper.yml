@@ -115,6 +115,11 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    anticheat:
+      obfuscation:
+        items:
+          hide-itemmeta: false
+          hide-durability: false
     zombies-target-turtle-eggs: true
     piglins-guard-chests: true
     use-faster-eigencraft-redstone: false
@@ -236,6 +241,9 @@ world-settings:
       MinimumTicks: 100
       MaximumTicks: 600
     despawn-ranges:
+      axolotls:
+        soft: 32
+        hard: 128
       monster:
         soft: 32
         hard: 128
@@ -287,6 +295,7 @@ world-settings:
         wither: true
         wither-skeleton: true
     spawn-limits:
+      axolotls: -1
       monster: -1
       creature: -1
       underground_water_creature: -1

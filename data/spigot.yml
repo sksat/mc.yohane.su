@@ -63,6 +63,8 @@ players:
   disable-saving: false
 world-settings:
   default:
+    below-zero-generation-in-existing-chunks: true
+    simulation-distance: default
     verbose: false
     view-distance: default
     mob-spawn-range: 8
@@ -97,6 +99,10 @@ world-settings:
     thunder-chance: 100000
     max-entity-collisions: 8
     growth:
+      twistingvines-modifier: 100
+      weepingvines-modifier: 100
+      cavevines-modifier: 100
+      glowberry-modifier: 100
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
