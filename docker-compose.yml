@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   paper:
-    image: ghcr.io/sksat/papermc-docker:1.18.1@sha256:eb92708b7bae6fc8d6305a7ecbc985e65935c740a77e8dcdd8cd5ba285339d43
+    image: ghcr.io/sksat/papermc-docker:1.18.1@sha256:8d76a3dd7950d5b4a317dbef8fd8011b605d5ac2ccf389e08261d7e9abea9b53
     restart: always
     depends_on:
       - db
