@@ -25,6 +25,7 @@ timings:
   history-length: 3600
   server-name: Unknown Server
 settings:
+  fix-target-selector-tag-completion: true
   use-display-name-in-quit-message: false
   load-permissions-yml-before-plugins: true
   region-file-cache-size: 256
@@ -115,6 +116,7 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    monster-spawn-max-light-level: -1
     anticheat:
       obfuscation:
         items:
