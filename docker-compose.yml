@@ -18,7 +18,7 @@ services:
       - ./data:/app
 
   paper-tunnel:
-    image: cloudflare/cloudflared:2021.12.2
+    image: crazymax/cloudflared:2021.11.0
     restart: always
     volumes:
       - ./cloudflared:/etc/cloudflared
