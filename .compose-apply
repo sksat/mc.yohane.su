@@ -1,0 +1,5 @@
+docker-compose.yml
+deploy-plugin.sh
+cloudflared/*
+data/*
+item-count-exporter/*
