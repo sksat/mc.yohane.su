@@ -5,7 +5,7 @@ cd `dirname $0`
 
 PLUGINS=(
   # datasource=github-releases versioning=docker
-  "PlayPro/CoreProtect v20.3 CoreProtect nov"
+  "PlayPro/CoreProtect v20.4 CoreProtect nov"
   # datasource=github-releases
   "DiscordSRV/DiscordSRV v1.24.0 DiscordSRV-Build nov"
   # datasource=github-releases
