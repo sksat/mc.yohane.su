@@ -25,6 +25,7 @@ timings:
   history-length: 3600
   server-name: Unknown Server
 settings:
+  time-command-affects-all-worlds: false
   fix-target-selector-tag-completion: true
   use-display-name-in-quit-message: false
   load-permissions-yml-before-plugins: true
@@ -117,6 +118,15 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    slime-spawn-height:
+      swamp-biome:
+        maximum: 70.0
+        minimum: 50.0
+      slime-chunk:
+        maximum: 40.0
+    wateranimal-spawn-height:
+      maximum: default
+      minimum: default
     monster-spawn-max-light-level: -1
     anticheat:
       obfuscation:
