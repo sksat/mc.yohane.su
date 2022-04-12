@@ -9,7 +9,7 @@ PLUGINS=(
   # datasource=github-releases
   "DiscordSRV/DiscordSRV v1.25.1 DiscordSRV-Build nov"
   # datasource=github-releases
-  "sladkoff/minecraft-prometheus-exporter v2.4.2 minecraft-prometheus-exporter nov"
+  "sladkoff/minecraft-prometheus-exporter v2.5.0 minecraft-prometheus-exporter nov"
   # datasource=github-releases
   "kory33/itemstack-count-infrastructure v0.1.10 itemstack-count none"
   # datasource=github-releases
