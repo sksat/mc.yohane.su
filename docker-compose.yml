@@ -25,7 +25,7 @@ services:
     command: tunnel --hostname mc-tunnel.sksat.net --url tcp://paper:25565 --loglevel info
 
   db:
-    image: mariadb:10.7.1
+    image: mariadb:10.11.7
     command: --default-authentication-plugin=mysql_native_password
     ports:
       - 3306:3306
